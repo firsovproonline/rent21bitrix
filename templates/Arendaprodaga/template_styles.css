@@ -1,0 +1,194 @@
+body {padding: 0; margin: 0; font-family: Calibri; color: #616161;}
+a img {border: none;}
+   a { color: #008BCE; }
+   #container {width: 1240px;margin: 0 auto;
+   -webkit-box-shadow: 1px 1px 5px rgba(50, 50, 50, 0.75);
+   -moz-box-shadow:    1px 1px 5px rgba(50, 50, 50, 0.75);
+   box-shadow:         1px 1px 5px rgba(50, 50, 50, 0.75);   
+   }
+   
+   #header {height: 115px;}
+   
+   #header .htop  {height: 34px; width: 100%; background: url(images/htop.jpg) repeat-x;}
+   #header .htop .htopleft {height: 32px; float: left; margin-left: 15px;}
+   #header .htop .htopleft .htopleft1 {float: left; display: block; height: 32px; width: 32px; background: url(images/htopleft.png) 8px 8px no-repeat; margin: 0 5px;}   
+   #header .htop .htopleft .htopleft2 {float: left; display: block; height: 32px; width: 32px; background: url(images/htopleft.png) -29px 8px no-repeat; margin: 0 5px;} 
+   #header .htop .htopleft .htopleft3 {float: left; display: block; height: 32px; width: 32px; background: url(images/htopleft.png) -66px 8px no-repeat; margin: 0 5px;} 
+   #header .htop .htopright {height: 32px; float: right;}
+   
+   #header .hbot {}
+   #header .hbot .hbotleft {float: left; width: 252px; margin-left: 15px;}
+
+
+   
+   #header .hbot .hbotleft .hbotlefttop { height: 81px; width: 100%; margin-top: 2px;}
+   #header .hbot .hbotleft .hbotleftmid { width: 100%; height: 40px;}
+   #header .hbot .hbotleft .hbotleftbot { width: 253px;  height: 90px; overflow: hidden;  text-align: center;}
+   #header .hbot .hbotleft .hbotleftmid #regionselect {width: 252px;}
+   #header .hbot .hbotright { margin-left: 280px;}  
+   
+   #header .hbot .hbotright .hbotrightlogin {width: 315px; float: right; height: 89px;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginleft {height: 89px; float: left; width: 17px;  background: url(images/loginleft.png) no-repeat;} 
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid {height: 86px; margin: 3px 0 0 0; background: url(images/loginbg.png) repeat-x; float: left;  width: 260px; padding: 4px 0 0 0;}
+   
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid td {text-align: right;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .sep {width: 15px;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .errorlogin {color: red;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .doplinks {font-size: 15px; }
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .doplinks a {text-decoration: none;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .doplinks a:hover {text-decoration: underline;}
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid input { width: 104px; height: 18px; border: none; background: none; padding: 0; margin: 0; background: url(images/loogininputs.png) no-repeat; padding: 0 6px; font-size: 11px;} 
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid input.loginbuttons { width: 111px; height: 22px; border: none; background: none; padding: 0; margin: 0; background: url(images/loginbutton.png) no-repeat; color: #FFF;} 
+    
+    #header .hbot .hbotright .hbotrightlogin .hbotrightloginmid .loginico {background: url(images/loginico.png) left center no-repeat; height: 30px; font-size: 12px; padding-left: 27px;} 
+
+   
+   #header .hbot .hbotright .hbotrightlogin .hbotrightloginright {height: 89px; float: left; width: 17px; background: url(images/loginright.png) no-repeat;}
+   
+   
+   #header .hbot .hbotright .hbotrightbaner { width: 623px; float: left; height: 105px; overflow: hidden; padding: 10px 0; margin-right:22px; text-align: center; vertical-align: middle;} 
+   #header .hbot .hbotright .hbotrightmainmenu {height: 100px; float: left; padding-right: 10px; padding-left: 6px;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu1 a {color: #0194d9; text-decoration: underline;  font-size: 14px; padding: 6px 0px 8px 32px; } 
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu1 li:first-child a {padding-left: 0;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu1 a:hover { color:#616161; text-decoration: none;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu1 a.root-item-selected { color:#616161; text-decoration: none;}
+    #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu1 li a { }
+   
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 {height: 57px;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 .leftmenu {height: 57px; width: 6px; float: left; background:  url(images/hbotrightmainmenu2left.png) no-repeat;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 .midmenu {height: 57px; background:  url(images/hbotrightmainmenu2mid.png) repeat-x; float: left; width: 880px; padding: 0 21px;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 .midmenu li:first-child {margin-left: 14px;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 .rightmenu {height: 57px; width: 6px; float: left; background:  url(images/hbotrightmainmenu2right.png) no-repeat;}
+   #header .hbot .hbotright .hbotrightmainmenu  .hbotrightmainmenu2 a{color: #0194d9; font-size: 14px; padding: 5px 20px 5px 21px; }
+
+   #leftblock {float: left; width: 260px; margin-left: 8px;}
+   #leftblock h3 {font-size: 26px; font-family: Verdana; text-align: center; margin: 0; padding: 0; color: #20a5fc; font-weight: normal; line-height: 29px; text-shadow: #145d8c 1px 1px 1px;}
+   
+
+   #leftblock .leftblocktop h3 {background: url(images/icohome.png) 24px 10px no-repeat;padding-top: 5px}
+   #leftblock .leftblockmid1 h3 {background: url(images/icopen.png) 24px 10px no-repeat;padding-top: 5px}
+   #leftblock .leftblockmid1 table td {text-align: center; vertical-align: middle;}
+    #leftblock .leftblockmid1 table td.ar {color: #d90000; font-weight: bold;}
+    #leftblock .leftblockmid1 table td.ar a {color: #d90000;}
+    #leftblock .leftblockmid1 table td.pr {color: #0192d6; font-weight: bold;}
+     #leftblock .leftblockmid1 table td.pr a {color: #0192d6;}
+    #leftblock .leftblockmid1 table td.fot {font-weight: bold; font-size: 15px; padding-top: 10px; color: #d90000;}
+     #leftblock .leftblockmid1 table td.fot a {color: #d90000;}
+    #leftblock .leftblockmid1 table  a:hover {text-decoration: none;} 
+     
+   #leftblock .leftblockmid3 h3 {background: url(images/icolist.png) 28px 10px no-repeat; padding-top: 14px;}
+   #leftblock .leftblockmid3 .blokheaderblue span {margin-left: 35px; margin-top: 25px; display: block;}
+   #leftblock .leftblockmid3 .blokcontentblue {font-size: 13px}
+   #leftblock .leftblockmid3 .blokcontentblue ul {margin-left: 15px; list-style: none; margin-bottom: 5px;}
+   #leftblock .leftblockmid3 .blokcontentblue ul li {list-style: none; padding: 0 0 0 10px; background: url(images/romb.png) 3px center no-repeat;}
+   #leftblock .leftblockmid3 .blokcontentblue .txt {padding: 0 14px;}
+   #leftblock .leftblockmid4 h3 {background: url(images/icophoto.png) 27px 10px no-repeat; padding-top: 15px}
+   #leftblock .leftblockmid4 p {margin: 0; padding: 0 14px; text-indent: 6px; color: #0194d9}
+    #leftblock .blokcontentblue ul {margin: 0; padding: 0;}
+   .blokheaderblue {background: url(images/topblockblue.png) no-repeat; height: 90px; padding-top: 13px;} 
+   .blokfooterblue {background: url(images/botomblockblue.png) no-repeat; height: 66px;} 
+   .blokfooterblue a {display: block; margin-left: 88px; padding-top: 44px; width: 92px; height: 20px; color: #FFF; font-size: 11px; text-decoration: none; line-height: 11px; text-align: center; 
+   text-transform: uppercase; font-weight: bold;}
+   .blokfooterblue a.line2 {padding-top: 39px; height: 23px; }
+   .blokfooterblue a:hover {text-decoration: underline}
+   .blockmidblue {background: url(images/blockborderblue2.png) repeat-y;}
+   .blockmidblue .blokgradientblue {width: 247px; min-height: 100px; margin: 0 13px 0 9px;}
+   
+   
+ .blokgradientblue, .blokgradientred  {
+	background: #cfcfcf url("images/gradient-bg.png") repeat-x top;
+	-o-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+	*background: #cfcfcf; 
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr=#FFf0f0f0, endColorstr=#FFcfcfcf);
+	}
+	@media all and (min-width: 0px) {
+		.blokgradientblue {
+			background: #cfcfcf url("images/gradient-bg.svg");
+			background-image: -webkit-gradient(
+				linear,
+				left top, left bottom,
+				from(#f0f0f0),
+				to(#cfcfcf)
+			);
+			background-image: -webkit-linear-gradient(
+				top,
+				#f0f0f0,
+				#cfcfcf
+			);
+			background-image: -moz-linear-gradient(
+				top,
+				#f0f0f0,
+				#cfcfcf
+			);
+			background-image: -o-linear-gradient( 
+				top,
+				#f0f0f0,
+				#cfcfcf
+			);
+			background-image: linear-gradient(
+				top,
+				#f0f0f0,
+				#cfcfcf
+			);
+		}
+	}  
+   
+   
+   .blokheaderred {background: url(images/topblockred.png) no-repeat; height: 109px; padding-top: 18px;} 
+   .blokfooterred {background: url(images/botomblockred.png) no-repeat; height: 66px;} 
+   .blokfooterred a {display: block; margin-left: 105px; padding-top: 39px; width: 101px; height: 20px; color: #FFF; font-size: 11px; text-decoration: none; line-height: 11px; text-align: center; 
+   text-transform: uppercase; font-weight: bold;}
+   .blokfooterred a.line2 {padding-top: 39px; height: 23px; }
+   .blokfooterred a:hover {text-decoration: underline}   
+   .blockmidred {background: url(images/blockborderred.png) repeat-y;}
+   .blockmidred .blokgradientred {min-height: 165px; width: 292px;  margin: 0 13px 0 8px;}
+   
+   
+   .blokcontentred {position: relative; }
+   .blokcontentblue {position: relative;}
+   
+    
+   #leftblock .leftblocktop, #leftblock .leftblockmid1, #leftblock .leftblockmid2, #leftblock .leftblockmid3, #leftblock .leftblockmid4, #leftblock .leftblockbot  {margin-right: -10px;}
+	#leftblock .leftblockmid2 {padding: 0 11px 0 7px; text-align: center;}
+	#leftblock .leftblockbot {padding: 0 11px 0 7px; text-align: center;}
+	#leftblock .leftblocktop {margin-top: 0px;}
+	#leftblock .leftblockmid2 {margin-top: 5px;}
+   #rightblock {width: 323px;float: right; margin-top: -3px;} 
+   #rightblock h3 {font-size: 26px; font-family: Verdana; text-align: center; margin: 0; padding: 0; color: #ff0000; font-weight: normal; line-height: 29px; text-shadow: #890404 1px 1px 1px; }
+   #rightblock .rightblocktop h3 {background: url(images/icostar.png) 33px 2px no-repeat; padding-top: 30px; padding-left: 0px;}
+   #rightblock .rightblockbot h3 {background: url(images/icolist.png) 33px 10px no-repeat; padding-top: 5px}
+   #rightblock .rightblockmid {margin: 0 0 0 5px;}
+   #rightblock .rightblockmid1 { padding: 0 17px 0 5px; text-align: center;}
+   
+    
+  	#content {
+  	 
+  	}
+	#content .contenttop {}
+	#content #workarea .blok1{ height: 420px;}
+	#content #workarea .blok2{ height: 420px;}
+	#content #workarea .blok3{ height: 250px;}
+	#content #workarea .blok4{margin: 5px; overflow: hidden;}
+	#content #workarea .blok5{ height: 435px;}
+	
+   #footer {clear: both;  height: 230px; background: url(images/footer.jpg) no-repeat; padding-top:20px;}
+   
+   #footer .footertop {height: 178px;}
+   #footer .footertop .footertopleft {width: 320px; float: left; height: 150px; font-size: 12px; padding-left: 8px;}
+   #footer .footertop .footertopmid {margin: 0 280px 0 320px; height: 150px;}
+   #footer .footertop .footertopright {width: 280px; float:right; height: 150px; font-size: 12px;}
+   #footer .footertop .footertopright .subscrinp {width: 153px; height: 22px; border: none; background: none; padding: 0 8px; margin: 0; background: url(images/subscrinp.png) no-repeat; margin-right: 10px; 
+   margin-top: 1px;}
+   #footer .footertop .footertopright .subscrbut {width: 90px; height: 22px; border: none; background: none; padding: 0; margin: 0; background: url(images/subscrbut.png) no-repeat; color: #FFF;}
+   #footer .footertop .footertopright b {font-size: 14px;}
+   #footer .footerbot {height: 52px;}
+   #footer .footerbot .footerbotleft {height: 52px; width: 320px; float: left; padding-left: 8px;}
+   #footer .footerbot .footerbotrihgt {height: 52px; margin: 0 0 0 320px;}
+   #footer .footerbot .footerbotrihgt .banners3 {width: 580px;}
+   #footer .footerbot .footerbotrihgt .banners3 td {text-align: center; vertical-align: middle; height: 52px;}
+   
+   .clear {clear: both;}
+   

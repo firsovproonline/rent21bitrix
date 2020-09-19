@@ -1,0 +1,800 @@
+<div>
+    <div style="min-width:100px">
+        <div class="infoSection" id="infoSection1">
+            <div class="infoSectionHeader">Тип объявления</div>
+            <div class="fieldsDiv">
+                <multyCian title="Операция" field='OPP' v-bind:list="['Аренда','Продажа']" multy='false'></multyCian>
+                <multyCian style="display:none" title="Недвижимость" field='TIPN' v-bind:list="['Коммерческая','Жилая','Загородная']" multy='false'></multyCian>
+                <multyCian style="display:none" title="Тип" field='TIP' v-bind:list="['Офис','Магазин','Склад']" multy='false'></multyCian>
+            </div>
+            <div class="infoSectionB">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:99%"></td>
+                        <td><div class='itemB' @click='editSection1()'>Редактировать</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="infoSection" id="infoAdres" >
+            <div class="infoSectionHeader" >Адрес</div>
+            <div class="fieldsDiv">
+                <br>
+                <setAdres title="Адрес" field='ADDR' v-bind:list="['Офис','Магазин','Склад']" multy='false'></setAdres>
+            </div>
+            <br>
+        </div>    
+        
+        
+        <div class="infoSection" id="infoSection3" style="display:11none">
+            <div class="infoSectionHeader">Об объекте</div>
+            <div class="fieldsDiv">
+                
+                <div class="divTab townhouseSale"  style="display:none" >
+                    <Category value='townhouseSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value=''  title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_InfroSale" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+                <div class="divTab cottageSale"  style="display:none" >
+                    <Category value='cottageSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value=''  title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_InfroSale" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+                <div class="divTab houseSale"  style="display:none" >
+                    <Category value='houseSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value=''  title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_InfroSale" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+
+
+                <div class="divTab townhouseRent"  style="display:none" >
+                    <Category value='townhouseRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value='' field="FlatTotalArea" title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_Infro" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+                <div class="divTab cottageRent"  style="display:none" >
+                    <Category value='cottageRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value='' field="FlatTotalArea" title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_Infro" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+
+                <div class="divTab houseRent"  style="display:none" >
+                    <Category value='houseRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <SettlementName value='' field="SettlementName" title="Название поселка"></SettlementName>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <house_Building_MaterialType value='' field="house_Building_MaterialType" title="Тип дома"  ></house_Building_MaterialType>
+                    <FlatTotalArea value='' field="FlatTotalArea" title="Общая площадь"></FlatTotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в доме"></Building_FloorsCount>
+                    <BedroomsCount value='' field="BedroomsCount" title="Количество спален"></BedroomsCount>
+                    <WcLocationType value='' field="WcLocationType" title="Санузел"></WcLocationType>
+                    <HeatingType value='' field="HeatingType" title="Отопление"></HeatingType>
+                    <house_Infro value='' field="house_Infro" title="В доме"></house_Infro>
+                    <Land value='' field="Land" title="Площадь участка" tip="notSale"  ></Land>
+                </div>
+
+                <div class="divTab roomRent"  style="display:none" >
+                    <Category value='roomRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <RoomsForSaleCount value='' field="RoomsForSaleCount" title="Комнат в аренду"></RoomsForSaleCount>
+                    <RoomArea value='' field="FlatTotalArea" title="Площадь комнаты"></RoomArea>
+                    <roomSale_TotalArea value='' field="roomSale_TotalArea" title="Общая площадь"  ></roomSale_TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <RoomsCount value='' field="RoomsCount" title="Всего комнат<br>в квартире" size="40px" mask="9{1,3}" ></RoomsCount>
+                    <KitchenArea value='' field="KitchenArea" title="Кухня"  ></KitchenArea>
+                    
+                    <Cian_Select value='' type="gorizontList" field="LoggiasCount" title="Лоджия"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="BalconiesCount" title="Балкон"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="SeparateWcsCount" title="Раздельные санузлы"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="CombinedWcsCount" title="Совмещенные санузлы"  ></Cian_Select>
+                    <RepairType value='' field="RepairType" title="Ремонт"  ></RepairType>
+                    <PetsAllowed value='' field="PetsAllowed" title="Можно с животными"  ></PetsAllowed>
+                    <ChildrenAllowed value='' field="PetsAllowed" title="Можно с детьми"  ></ChildrenAllowed>
+                    <rooms_Infro value='' field="rooms_Infro" title="Дополнительно"  ></rooms_Infro>
+
+                </div>
+                
+                <div class="divTab roomSale"  style="display:none" >
+                    <Category value='roomSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <RoomsForSaleCount value='' field="RoomsForSaleCount" title="Комнат в продажу"></RoomsForSaleCount>
+                    <RoomArea value='' field="FlatTotalAreaSale" title="Площадь комнаты"></RoomArea>
+                    <AllRoomsArea value='' field="AllRoomsArea" title="Площадь комнат"  ></AllRoomsArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <RoomsCount value='' field="RoomsCount" title="Всего комнат<br>в квартире" size="40px" mask="9{1,3}" ></RoomsCount>
+                    
+                    <roomSale_TotalArea value='' field="roomSale_TotalArea" title="Общая площадь"  ></roomSale_TotalArea>
+                    <KitchenArea value='' field="KitchenArea" title="Кухня"  ></KitchenArea>
+                    <Cian_Select value='' type="gorizontList" field="LoggiasCount" title="Лоджия"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="BalconiesCount" title="Балкон"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="SeparateWcsCount" title="Раздельные санузлы"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="CombinedWcsCount" title="Совмещенные санузлы"  ></Cian_Select>
+                    <RepairType value='' field="RepairType" title="Ремонт"  ></RepairType>
+
+                </div>
+                
+                
+                
+                <div class="divTab flatSale"  style="display:none" >
+                    <Category value='flatSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <IsApartments value='' field="IsApartments" title="Тип жилья"></IsApartments>
+                    <FlatRoomsCount value='' field="FlatRoomsCount" title="Количество комнат"></FlatRoomsCount>
+                    <FlatTotalArea value='' field="FlatTotalAreaSale" title="Общая площадь"></FlatTotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <AllRoomsArea value='' field="AllRoomsArea" title="Площадь комнат"  ></AllRoomsArea>
+                    <LivingArea value='' field="LivingArea" title="Жилая площадь"  ></LivingArea>
+                    <KitchenArea value='' field="KitchenArea" title="Кухня"  ></KitchenArea>
+                    <Cian_Select value='' type="gorizontList" field="LoggiasCount" title="Лоджия"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="BalconiesCount" title="Балкон"  ></Cian_Select>
+                    <WindowsViewType value='' field="WindowsViewType" title="Окна выходят"  ></WindowsViewType>
+                    <Cian_Select value='' type="gorizontList" field="SeparateWcsCount" title="Раздельные санузлы"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="CombinedWcsCount" title="Совмещенные санузлы"  ></Cian_Select>
+                    <RepairType value='' field="RepairType" title="Ремонт"  ></RepairType>
+                    <flat_Infro value='' field="flat_Infro" title="В квартире"  ></flat_Infro>
+
+                </div>
+
+                <div class="divTab flatRent"  style="display:none" >
+                    <Category value='flatRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <IsApartments value='' field="IsApartments" title="Тип жилья"></IsApartments>
+                    <FlatRoomsCount value='' field="FlatRoomsCount" title="Количество комнат"></FlatRoomsCount>
+                    <FlatTotalArea value='' field="FlatTotalArea" title="Общая площадь"></FlatTotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <AllRoomsArea value='' field="AllRoomsArea" title="Площадь комнат"  ></AllRoomsArea>
+                    <LivingArea value='' field="LivingArea" title="Жилая площадь"  ></LivingArea>
+                    <KitchenArea value='' field="KitchenArea" title="Кухня"  ></KitchenArea>
+                    <Cian_Select value='' type="gorizontList" field="LoggiasCount" title="Лоджия"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="BalconiesCount" title="Балкон"  ></Cian_Select>
+                    <WindowsViewType value='' field="WindowsViewType" title="Окна выходят"  ></WindowsViewType>
+                    <Cian_Select value='' type="gorizontList" field="SeparateWcsCount" title="Раздельные санузлы"  ></Cian_Select>
+                    <Cian_Select value='' type="gorizontList" field="CombinedWcsCount" title="Совмещенные санузлы"  ></Cian_Select>
+                    <RepairType value='' field="RepairType" title="Ремонт"  ></RepairType>
+                    <flat_Infro value='' field="flat_Infro" title="В квартире"  ></flat_Infro>
+
+                </div>
+                
+                
+                <div class="divTab businessSale"  style="display:none" >
+                    <Category value='businessSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Specialty value='' field="Specialty" title="Назначение"></Specialty>
+                    <PropertyType value='' field="PropertyType" title="Тип недвижимости"></PropertyType>
+                    <TotalArea value='' field="TotalAreaSale" title="площадь м²" size="40px" mask="9{1,4}" type="notAll" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <HasEquipment value='' field="HasEquipment" title="Оборудование"  ></HasEquipment>
+
+                </div>
+
+                <div class="divTab businessRent"  style="display:none" >
+                    <Category value='businessRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Specialty value='' field="Specialty" title="Назначение"></Specialty>
+                    <PropertyType value='' field="PropertyType" title="Тип недвижимости"></PropertyType>
+                    <TotalArea value='' field="TotalArea" title="площадь м²" size="40px" mask="9{1,4}" type="notAll" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <HasEquipment value='' field="HasEquipment" title="Оборудование"  ></HasEquipment>
+
+                </div>
+                <div class="divTab commercialLandRent"  style="display:none" >
+                    <Category value='commercialLandRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Land value='' field="Land" title="Площадь участка" tip="Rent"></Land>
+                    <Land_Status value='' field="Land_Status" title="Категория земли" ></Land_Status>
+                    <PermittedUseType value='' field="PermittedUseType" title="Вид разрешенного<br>использования" ></PermittedUseType>
+                    <HasInvestmentProject value='' field="HasInvestmentProject" title="Инвестпроект" ></HasInvestmentProject>
+                    <HasEncumbrances value='' field="HasEncumbrances" title="Наличие обременения" ></HasEncumbrances>
+                    <Electricity value='' field="Electricity" title="Электричество" ></Electricity>
+                    <Gas value='' field="Gas" title="Газ" ></Gas>
+                    <Drainage value='' field="Drainage" title="Канализация" ></Drainage>
+                    <Water value='' field="Water" title="Водоснабжение" ></Water>
+                    <DrivewayType value='' field="DrivewayType" title="Подъездные пути" ></DrivewayType>
+                    
+                </div>
+                
+                <div class="divTab commercialLandSale"  style="display:none" >
+                    <Category value='commercialLandSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Land value='' field="Land" title="Площадь участка" tip="Sale"></Land>
+                    <Land_Status value='' field="Land_Status" title="Категория земли" ></Land_Status>
+                    <PermittedUseType value='' field="PermittedUseType" title="Вид разрешенного<br>использования" ></PermittedUseType>
+                    <HasInvestmentProject value='' field="HasInvestmentProject" title="Инвестпроект" ></HasInvestmentProject>
+                    <HasEncumbrances value='' field="HasEncumbrances" title="Наличие обременения" ></HasEncumbrances>
+                    <Electricity value='' field="Electricity" title="Электричество" ></Electricity>
+                    <Gas value='' field="Gas" title="Газ" ></Gas>
+                    <Drainage value='' field="Drainage" title="Канализация" ></Drainage>
+                    <Water value='' field="Water" title="Водоснабжение" ></Water>
+                    <DrivewayType value='' field="DrivewayType" title="Подъездные пути" ></DrivewayType>
+                    
+                </div>
+                <div class="divTab warehouseRent"  style="display:none" >
+                    <Category value='warehouseRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_ColumnGrid value='' field="Building_ColumnGrid" title="Сетка колон"  ></Building_ColumnGrid>
+                    <FloorMaterialTypeType value='' field="FloorMaterialTypeType" title="Материал пола"  ></FloorMaterialTypeType>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="industrySale"  ></ConditionType>
+                    <Building_GatesType value='' field="Building_GatesType" title="Ворота" ></Building_GatesType>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты" tip="industrySale" ></Building_LiftTypes>
+                    <Building_CranageTypes value='' field="Building_CranageTypes" title="Крановое оборудование" ></Building_CranageTypes>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <Parking value='' field="Parking" title="Парковка" tip="industrySale"  ></Parking>
+                    <DopUslug value='' field="DopUslug" title="Дополнительные услуги" ></DopUslug>
+                    
+                </div>
+
+                <div class="divTab warehouseSale"  style="display:none" >
+                    <Category value='warehouseSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalAreaSale" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_ColumnGrid value='' field="Building_ColumnGrid" title="Сетка колон"  ></Building_ColumnGrid>
+                    <FloorMaterialTypeType value='' field="FloorMaterialTypeType" title="Материал пола"  ></FloorMaterialTypeType>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="industrySale"  ></ConditionType>
+                    <Building_GatesType value='' field="Building_GatesType" title="Ворота" ></Building_GatesType>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты" tip="industrySale" ></Building_LiftTypes>
+                    <Building_CranageTypes value='' field="Building_CranageTypes" title="Крановое оборудование" ></Building_CranageTypes>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <Parking value='' field="Parking" title="Парковка" tip="industrySale"  ></Parking>
+                    <DopUslug value='' field="DopUslug" title="Дополнительные услуги" ></DopUslug>
+                    
+                </div>
+                
+                
+                
+                <div class="divTab industryRent"  style="display:none" >
+                    <Category value='industryRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_ColumnGrid value='' field="Building_ColumnGrid" title="Сетка колон"  ></Building_ColumnGrid>
+                    <FloorMaterialTypeType value='' field="FloorMaterialTypeType" title="Материал пола"  ></FloorMaterialTypeType>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="industrySale"  ></ConditionType>
+                    <Building_GatesType value='' field="Building_GatesType" title="Ворота" ></Building_GatesType>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты" tip="industrySale" ></Building_LiftTypes>
+                    <Building_CranageTypes value='' field="Building_CranageTypes" title="Крановое оборудование" ></Building_CranageTypes>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <Parking value='' field="Parking" title="Парковка" tip="industrySale"  ></Parking>
+                    <DopUslug value='' field="DopUslug" title="Дополнительные услуги" ></DopUslug>
+                    
+                </div>
+
+                <div class="divTab industrySale"  style="display:none" >
+                    <Category value='industrySale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalAreaSale" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_ColumnGrid value='' field="Building_ColumnGrid" title="Сетка колон"  ></Building_ColumnGrid>
+                    <FloorMaterialTypeType value='' field="FloorMaterialTypeType" title="Материал пола"  ></FloorMaterialTypeType>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="industrySale"  ></ConditionType>
+                    <Building_GatesType value='' field="Building_GatesType" title="Ворота" ></Building_GatesType>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты" tip="industrySale" ></Building_LiftTypes>
+                    <Building_CranageTypes value='' field="Building_CranageTypes" title="Крановое оборудование" ></Building_CranageTypes>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <Parking value='' field="Parking" title="Парковка" tip="industrySale"  ></Parking>
+                    <DopUslug value='' field="DopUslug" title="Дополнительные услуги" ></DopUslug>
+                    
+                </div>
+                
+                
+                <div class="divTab garageRent" id="garageRent" style="display:none" >
+                    <Category value='garageRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Garage_Type value='' field="Garage_Type" title="Тип"></Garage_Type>
+                    <TotalArea value='' field="TotalArea" type="garageRent" title="площадь" size="40px" mask="9{1,4}" ></TotalArea>
+                    <Garage_Status value='' field="Garage_Status"  title="Статус"  ></Garage_Status>
+                    
+                </div>
+                <div class="divTab garageSale"  style="display:none" >
+                    <Category value='garageSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Garage_Type value='' field="Garage_Type" title="Тип"></Garage_Type>
+                    <TotalArea value='' field="TotalArea" type="garageSale" title="площадь" size="40px" mask="9{1,4}" ></TotalArea>
+                    <Garage_Status value='' field="Garage_Status"  title="Статус"  ></Garage_Status>
+                    
+                </div>
+
+                <div class="divTab officeRent" id="officeRent" style="display:none" >
+                    <Category value='officeRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                    <Layout value='' field="Layout" title="Планировка"  ></Layout>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <ConditionType value='' field="ConditionType" title="Состояние"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <AccessType value='' field="AccessType" title="Доступ"  ></AccessType>
+                    <Parking value='' field="Parking" title="Парковка"  ></Parking>
+                </div>
+                <div class="divTab officeSale"  style="display:none">
+                    <Category value='officeSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                    <Layout value='' field="Layout" title="Планировка"  ></Layout>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <ConditionType value='' field="ConditionType" title="Состояние"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <AccessType value='' field="AccessType" title="Доступ"  ></AccessType>
+                    <Parking value='' field="Parking" title="Парковка"  ></Parking>
+                </div>
+                
+                
+                
+                <div class="divTab freeAppointmentObjectSale"  style="display:none">
+                    <Category value='freeAppointmentObjectSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalAreaSale" title="Общая площадь" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <Specialty value='' field="Specialty" title="Назначение"  ></Specialty>
+                    <HasShopWindows value='' field="HasShopWindows" title="Витринные окна"  ></HasShopWindows>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                </div>
+                <div class="divTab freeAppointmentObjectRent"  style="display:none">
+                    <Category value='freeAppointmentObjectRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <Specialty value='' field="Specialty" title="Назначение"  ></Specialty>
+                    <HasShopWindows value='' field="HasShopWindows" title="Витринные окна"  ></HasShopWindows>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                </div>
+
+
+
+
+                <div class="divTab shoppingAreaRent"  style="display:none">
+                    <Category value='shoppingAreaRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <HasShopWindows value='' field="HasShopWindows" title="Витринные окна"  ></HasShopWindows>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                    <Specialty value='' field="Specialty" title="Назначение"  ></Specialty>
+
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    
+                </div>
+                <div class="divTab shoppingAreaSale"  style="display:none">
+                    <Category value='shoppingAreaSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <TotalArea value='' field="TotalArea" title="Общая площадь м²" size="40px" mask="9{1,4}" ></TotalArea>
+                    <FloorNumber value='' field="FloorNumber" title="Этаж" size="40px" mask="9{1,3}" ></FloorNumber>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <HasShopWindows value='' field="HasShopWindows" title="Витринные окна"  ></HasShopWindows>
+                    <IsLegalAddressProvided value='' field="IsLegalAddressProvided" title="Юридический адрес"  ></IsLegalAddressProvided>
+                    <Cian_Select value='' type="gorizontList" field="WaterPipesCount" title="Кол-во мокрых точек"  ></Cian_Select>
+                    <Electricity value='' field="Electricity" title="Электрическая мощность"  ></Electricity>
+                    <IsOccupied value='' field="IsOccupied" title="Помещение занято"  ></IsOccupied>
+                    <Specialty value='' field="Specialty" title="Назначение"  ></Specialty>
+
+                    <ConditionType value='' field="ConditionType" title="Состояние" tip="shoppingArea"  ></ConditionType>
+                    <FurniturePresence value='' field="FurniturePresence" title="Мебель"  ></FurniturePresence>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    
+                </div>
+
+            </div>
+            <br>
+            <div class="infoSectionB">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:99%"></td>
+                        <td><div class='itemB' @click='editSection3()'>Редактировать</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+        <div class="infoSection" id="infoSection4" >
+            <div class="infoSectionHeader">О здании</div>
+            <div class="fieldsDiv">
+                
+                <div class="divTab flatRent flatSale roomSale roomRent"  style="display:none" >
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_MaterialType value='' field="Building_MaterialType" title="Тип и серия дома"  ></Building_MaterialType>
+                    <CeilingHeight  value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_PassengerLiftsCount type="gorizontList" value='' field="Building_PassengerLiftsCount" title="Пассажирских лифтов"  ></Building_PassengerLiftsCount>
+                    <Building_CargoLiftsCount type="gorizontList" value='' field="Building_CargoLiftsCount" title="Грузовых лифтов"  ></Building_CargoLiftsCount>
+                    <HasRamp value='' field="HasRamp" title="Пандус"  ></HasRamp>
+                    <Building_HasGarbageChute value='' field="Building_HasGarbageChute" title="В доме"  ></Building_HasGarbageChute>
+                    <flat_Building_Parking value='' field="flat_Building_Parking" title="Парковка"  ></flat_Building_Parking>
+                    
+                </div>                
+                
+                <div class="divTab industryRent warehouseRent"  style="display:none" >
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_Type value='' field="Building_Type" title="Тип здания"  ></Building_Type>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                </div>
+
+                <div class="divTab industrySale warehouseSale"  style="display:none" >
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_Type value='' field="Building_Type" title="Тип здания"  ></Building_Type>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                </div>
+                
+                 
+                
+                <div class="divTab buildingSale"  style="display:none" >
+                    <Category value='buildingSale' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в здании"  ></Building_FloorsCount>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_Type value='' field="Building_Type" title="Возможное назначение"  ></Building_Type>
+                    <ConditionType value='' field="ConditionType" tip="shoppingArea" title="Состояние"  ></ConditionType>
+                    <HasFurniture value='' field="HasFurniture"  title="Мебель"  ></HasFurniture>
+                    <Building_HouseLineType value='' field="Building_HouseLineType"  title="Линия домов"  ></Building_HouseLineType>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты"  ></Building_LiftTypes>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    <Parking value='' field="Parking" title="Парковка"  ></Parking>
+                    
+                </div>
+                <div class="divTab buildingRent"  style="display:none" >
+                    <Category value='buildingRent' field="Category"></Category>
+                    <CadastralNumber value='' field="CadastralNumber" title="Кадастровый номер"></CadastralNumber>
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Building_FloorsCount value='' field="Building_FloorsCount" title="Этажей в здании"  ></Building_FloorsCount>
+                    <CeilingHeight value='' field="CeilingHeight" title="Высота потолков"  ></CeilingHeight>
+                    <Building_Type value='' field="Building_Type" title="Возможное назначение"  ></Building_Type>
+                    <ConditionType value='' field="ConditionType" tip="shoppingArea" title="Состояние"  ></ConditionType>
+                    <HasFurniture value='' field="HasFurniture"  title="Мебель"  ></HasFurniture>
+                    <Building_HouseLineType value='' field="Building_HouseLineType"  title="Линия домов"  ></Building_HouseLineType>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                    <Building_LiftTypes value='' field="Building_LiftTypes" title="Лифты"  ></Building_LiftTypes>
+                    <InputType value='' field="InputType" title="Вход"  ></InputType>
+                    <Parking value='' field="Parking" title="Парковка"  ></Parking>
+                    
+                </div>
+                
+                
+                
+                <div class="divTab garageRent garageSale"  style="display:none">
+                    <Building_Name value='' field="Building_Name" title="ГСК"  ></Building_Name>
+                    <Parking tip='Garage' value='' field="Garage_Parking" title="Тип парковки"  ></Parking>
+                    <GarageTH value='' field="GarageTH" title="Технические<br>характеристики"  ></GarageTH>
+                </div>
+
+                <div class="divTab freeAppointmentObjectRent freeAppointmentObjectSale"  style="display:none">
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_Type value='' field="Building_Type" title="Тип здания"  ></Building_Type>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                </div>
+                <div class="divTab officeRent officeSale"  style="display:none">
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_BuildYear value='' field="Building_BuildYear" title="Год постройки"  ></Building_BuildYear>
+                    <Building_Type value='' field="Building_Type" title="Тип здания"  ></Building_Type>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building->Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                </div>
+                <div class="divTab shoppingAreaRent shoppingAreaSale"  style="display:none">
+                    <Building_Name value='' field="Building_Name" title="Название"  ></Building_Name>
+                    <Building_Type value='' field="Building_Type" title="Тип здания"  ></Building_Type>
+                    <Building_ClassType value='' field="Building_ClassType" title="Класс здания"  ></Building_ClassType>
+                    <Building_TotalArea value='' field="Building_TotalArea" title="Площадь здания"  ></Building_TotalArea>
+                    <Land value='' field="Land" title="Участок"  ></Land>
+                    <Building_StatusType value='' field="Building_StatusType" title="Категория"  ></Building_StatusType>
+                    <Building_Developer value='' field="Building_Developer" title="Девелопер"  ></Building_Developer>
+                    <Building_ManagementCompany value='' field="Building_ManagementCompany" title="Управляющая компания"  ></Building_ManagementCompany>
+                    <Building_multy value='' field="Building_multy" title=""  ></Building_multy>
+                    <OpeningHours value='' field="OpeningHours" title="Часы работы"  ></OpeningHours>
+                    <Building_WorkingDaysType value='' field="Building_WorkingDaysType" title="Дни недели"  ></Building_WorkingDaysType>
+                    
+                    
+                </div>
+            </div>  
+            <br>
+            <div class="infoSectionB">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:99%"></td>
+                        <td><div class='itemB' @click='editSection3()'>Редактировать</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+
+        <div class="infoSection" id="infoSection5" >
+            <div class="infoSectionHeader">Инфраструктура</div>
+            <div class="fieldsDiv">
+                <div class="divTab officeRent officeSale shoppingAreaRent shoppingAreaSale"  style="display:none">
+                    <Building_Infrastructure value='' field="Building_Infrastructure" title=""  ></Building_Infrastructure>
+                </div>
+                <div class="divTab industrySale industryRent warehouseSale warehouseRent"  style="display:none">
+                    <Building_Infrastructure value='' field="Building_Infrastructure" title="" tip="industrySale"  ></Building_Infrastructure>
+                </div>
+                <div class="divTab garageRent garageSale"  style="display:none">
+                    <Building_Infrastructure tip='Garage' value='' field="Building_Infrastructure" title=""  ></Building_Infrastructure>
+                </div>
+                
+                
+                
+            </div>  
+            <br>
+            <div class="infoSectionB">
+                <table style="width:100%">
+                    <tr>
+                        <td style="width:99%"></td>
+                        <td><div class='itemB' @click='editSection3()'>Редактировать</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>    
+        <div class="infoSection" id="photoSection" >
+            <div class="infoSectionHeader" >Фотографии</div>
+            <div class="fieldsDiv">
+                <photoGrid class="photoGrid" id="dropZone" ></photoGrid>
+                <br>
+            </div>
+        </div>    
+        <div class="infoSection" id="infoRem" >
+            <div class="infoSectionHeader" >Текст обьявления</div>
+            <div class="fieldsDiv">
+                <globaID></globaID>
+                <globalUID></globalUID>
+                <globalTitle value='' field="globalTitle" title="Заголовок обьявления"></globalTitle>
+                <globalRem value='' field="globalRem" title="Текст обьявления"></globalRem>
+            </div>
+            <br>
+        </div>    
+        <div class="infoSection" id="infoSection4" >
+            <div class="infoSectionHeader" >Условия сделки</div>
+            <div class="fieldsDiv">
+                
+                <div class="divTab buildingRent"  style="display:none">
+                    <BargainTerms_Price value='' field="BargainTerms_Price" title="Ставка за м2"></BargainTerms_Price>
+                    <IncludedOptions value='' field="IncludedOptions" title="В ставку включены"></IncludedOptions>
+                    <LeaseType value='' field="LeaseType" title="Тип аренды"></LeaseType>
+                    <MinLeaseTerm value='' field="MinLeaseTerm" title="Минимальный срок аренды"></MinLeaseTerm>
+                    <HasGracePeriod value='' field="HasGracePeriod" title="Арендные каникулы"></HasGracePeriod>
+                    <SecurityDeposit value='' field="SecurityDeposit" title="Обеспечительный платеж"></SecurityDeposit>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                </div>    
+                
+                <div class="divTab commercialLandRent"  style="display:none">
+                    <IncludedOptions value='' field="IncludedOptions" title="В ставку включены" tip="commercialLandRent"></IncludedOptions>
+                    <LeaseType value='' field="LeaseType" title="Тип аренды"></LeaseType>
+                    <MinLeaseTerm value='' field="MinLeaseTerm" title="Минимальный срок аренды"></MinLeaseTerm>
+                    <HasGracePeriod value='' field="HasGracePeriod" title="Арендные каникулы"></HasGracePeriod>
+                    <SecurityDeposit value='' field="SecurityDeposit" title="Обеспечительный платеж"></SecurityDeposit>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                </div>    
+                
+                
+                <div class="divTab officeRent shoppingAreaRent freeAppointmentObjectRent industryRent warehouseRent"  style="display:none">
+                    <VatType value='' field="VatType" title="Налог"></VatType>
+                    <IncludedOptions value='' field="IncludedOptions" title="В ставку включены"></IncludedOptions>
+                    <LeaseType value='' field="LeaseType" title="Тип аренды"></LeaseType>
+                    <MinLeaseTerm value='' field="MinLeaseTerm" title="Минимальный срок аренды"></MinLeaseTerm>
+                    <HasGracePeriod value='' field="HasGracePeriod" title="Арендные каникулы"></HasGracePeriod>
+                    <SecurityDeposit value='' field="SecurityDeposit" title="Обеспечительный платеж"></SecurityDeposit>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                </div>    
+                <div class="divTab officeSale shoppingAreaSale"  style="display:none">
+                    <VatType value='' field="VatType" title="Налог"></VatType>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                </div>
+                
+                
+                <div class="divTab businessRent"  style="display:none">
+                    <IncludedOptions value='' field="IncludedOptions" title="В ставку включены"></IncludedOptions>
+                    <LeaseType value='' field="LeaseType" title="Тип аренды"></LeaseType>
+                    
+                    <MinLeaseTerm value='' field="MinLeaseTerm" title="Минимальный срок аренды"></MinLeaseTerm>
+                    <HasGracePeriod value='' field="HasGracePeriod" title="Арендные каникулы"></HasGracePeriod>
+                    <SecurityDeposit value='' field="SecurityDeposit" title="Обеспечительный платеж"></SecurityDeposit>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <ClientFee value='' field="ClientFee" title="Комиссия от прямого<br>клиента %"></ClientFee>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                    
+                </div>
+                <div class="divTab garageRent"  style="display:none">
+                    <IncludedOptions value='' field="IncludedOptions" title="В ставку включены"></IncludedOptions>
+                    <MinLeaseTerm value='' field="MinLeaseTerm" title="Минимальный срок аренды"></MinLeaseTerm>
+                    <SecurityDeposit value='' field="SecurityDeposit" title="Обеспечительный платеж"></SecurityDeposit>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <ClientFee value='' field="ClientFee" title="Комиссия от прямого<br>клиента %"></ClientFee>
+                </div>
+                <div class="divTab garageSale"  style="display:none">
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                <div class="divTab buildingSale"  style="display:none">
+                    <BargainTerms_PriceSale value='' field="BargainTerms_PriceSale" title="Цена"></BargainTerms_PriceSale>
+                    <VatType value='' field="VatType" title="Налог"></VatType>
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                <div class="divTab freeAppointmentObjectSale industrySale warehouseSale"  style="display:none">
+                    <VatType value='' field="VatType" title="Налог"></VatType>
+                    <ContractType value='' field="ContractType" title="Тип договора"></ContractType>
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                <div class="divTab commercialLandSale"  style="display:none">
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                <div class="divTab businessSale"  style="display:none">
+                    <VatType value='' field="VatType" title="Налог"></VatType>
+                    <EstateType value='' field="EstateType" title="Недвижимость"></EstateType>
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                
+                <div class="divTab flatSale roomSale"  style="display:none">
+                    
+                    <flat_SaleType value='' field="flat_SaleType" title="Тип продажи"></flat_SaleType>
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+
+
+                <div class="divTab flatRent"  style="display:none">
+                    
+                    <BargainAllowed value='' field="BargainAllowed" title="Возможен торг"></BargainAllowed>
+                    <UtilitiesTerms value='' field="UtilitiesTerms" title="Коммунальные<br>платежи"></UtilitiesTerms>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <SecurityDeposit value='' field="Deposit" title="Залог собственнику"></SecurityDeposit>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+
+                </div>
+                <div class="divTab roomRent"  style="display:none">
+                    
+                    <BargainAllowed value='' field="BargainAllowed" title="Возможен торг"></BargainAllowed>
+                    <UtilitiesTerms value='' field="UtilitiesTerms" title="Коммунальные<br>платежи"></UtilitiesTerms>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <SecurityDeposit value='' field="Deposit" title="Залог собственнику"></SecurityDeposit>
+                    <TenantsType value='' field="TenantsType" title="Состав съемщиков"></TenantsType>
+                    
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+
+                </div>
+                <div class="divTab houseRent cottageRent townhouseRent"  style="display:none">
+                    <BargainAllowed value='' field="BargainAllowed" title="Возможен торг"></BargainAllowed>
+                    <UtilitiesTerms value='' field="UtilitiesTerms" title="Коммунальные<br>платежи"></UtilitiesTerms>
+                    <PrepayMonths value='' field="PrepayMonths" title="Предоплата"></PrepayMonths>
+                    <SecurityDeposit value='' field="Deposit" title="Залог собственнику"></SecurityDeposit>
+                    <div>Какой процент стоимости аренды вы хотите получить</div>
+                </div>
+                <div class="divTab houseSale cottageSale townhouseSale"  style="display:none">
+                    <AgentBonus value='' field="AgentBonus" title="Бонус агенту"></AgentBonus>
+                </div>
+                                
+                
+                
+            </div>    
+        </div>    
+        <br></br>
+        <button @click='send()'>save</button>
+    </div>
+</div>
